@@ -54,7 +54,7 @@ ROOT_URLCONF = 'back.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'front/.next/server/pages'),
+        'DIRS': [os.path.join(BASE_DIR, '.next/server/pages'),
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -117,8 +117,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 
-STATIC_URL = 'static/'
-MEDIA_URL = 'media/'
+#ADMIN_MEDIA_PREFIX = '/admin-media/'
+STATIC_URL = '/static/'
+MEDIA_URL ='/media/'
 
 
 # Default primary key field type
@@ -126,9 +127,9 @@ MEDIA_URL = 'media/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'front/.next/static')
+STATIC_ROOT = os.path.join(BASE_DIR, '.next/static')
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'front/.next/static/css')
+    os.path.join(BASE_DIR, '.next/static/css')
 ]
