@@ -54,7 +54,9 @@ ROOT_URLCONF = 'back.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, '.next/server/pages'),
+        #'DIRS': [os.path.join(BASE_DIR, '.next/server/pages'),
+        #],
+        'DIRS': [os.path.join(BASE_DIR, 'static'),
         ],
         'APP_DIRS': True,
         'OPTIONS': {
@@ -131,5 +133,5 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, '.next/static/css')
+    os.path.join(BASE_DIR, 'static')
 ]
